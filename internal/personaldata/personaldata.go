@@ -11,7 +11,6 @@ type Personal struct {
 
 // Ниже создайте метод Print()
 func (p Personal) Print() {
-	fmt.Println("Имя:", p.Name)
-	fmt.Println("Вес:", p.Weight)
-	fmt.Println("Рост:", p.Height)
+	str:=fmt.Sprintf("Имя: %s\nВес: %.2f\nРост: %.2f", p.Name, p.Weight, p.Height)
+	fmt.Println(str)	
 }
