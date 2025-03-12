@@ -13,15 +13,15 @@ type DataParser interface {
 // создайте функцию Info()
 func Info(dataset []string, dp DataParser) {
 
-	for _, value_str := range dataset {
+	for _, v := range dataset {
 
-		err := dp.Parse(value_str)
+		err := dp.Parse(v)
 
 		if err != nil {
 			fmt.Println(err)
 			continue
 		}
-		
+
 		str, err := dp.ActionInfo()
 
 		if err != nil {
